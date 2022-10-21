@@ -9,7 +9,7 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
+                git branch: 'master', url: 'git@github.com:Akrillai/CI-CD-Docker-Jenkins-FuseBox.git'
              
           }
         }
