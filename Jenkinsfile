@@ -6,12 +6,12 @@ pipeline {
        maven "m3"
     }
  stages {
-      stage('checkout') {
-           steps {
-             
-                git branch: 'master', url: 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
-             
-          }
+      stage('git clone') {
+            steps {
+                git 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
+                sh "mvn clean package"
+            }
+
         }
 	 stage('Execute Maven') {
            steps {
