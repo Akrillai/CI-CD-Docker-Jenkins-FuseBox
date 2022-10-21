@@ -16,7 +16,7 @@ pipeline {
 	 stage('Execute Maven') {
            steps {
              
-                sh 'cd boxfuse-sample-java-war-hello && mvn package'
+                sh 'mvn package'
           }
         }
         
