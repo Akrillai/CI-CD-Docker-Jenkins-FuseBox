@@ -9,7 +9,6 @@ pipeline {
       stage('git clone') {
             steps {
                 git 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
-                sh "mvn clean package"
             }
 
         }
