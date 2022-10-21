@@ -6,11 +6,11 @@ pipeline {
        maven "m3"
     }
  stages {
-  stage('Docker Build and Tag') {
+      stage('checkout') {
            steps {
-              
-                sh 'git clone https://github.com/Akrillai/CI-CD-Docker-Jenkins-FuseBox.git' 
-               
+             
+                git branch: 'master', url: 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
+             
           }
         }
 	 stage('Execute Maven') {
