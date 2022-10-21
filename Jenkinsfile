@@ -9,14 +9,14 @@ pipeline {
       stage('checkout') {
            steps {
              
-                git branch: 'master', url: 'https://github.com/Akrillai/CI-CD-Docker-Jenkins-FuseBox.git'
+                git branch: 'master', url: 'https://github.com/Akrillai/boxfuse-sample-java-war-hello.git'
              
           }
         }
 	 stage('Execute Maven') {
            steps {
              
-                sh 'mvn package'             
+                sh 'cd boxfuse-sample-java-war-hello && mvn package'             
           }
         }
         
